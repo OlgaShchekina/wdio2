@@ -1,8 +1,10 @@
 
 const assert = require('assert');
 const {expect} = require ('chai');
-//const email = 'www@gmail.com'//Math.random()+'olya6avg@gmail.com';
-//const firstName = 'John';
+const email = Math.random()+'aaa@gmail.com';
+const firstName = 'John';
+const lastName = 'Smith';
+const password = Math.random()+'11111';
 
 describe('Register page', () => {
     it('should have the right title', () => {
@@ -24,23 +26,27 @@ describe('Register page', () => {
     });
     it('should fill first name field', () => {
         const element = $('form input[name="firstName"]');
-        element.setValue('John');
+        element.setValue(firstName);
+
     });
     it('should fill last name field', () => {
         const element = $('form input[name="lastName"]');
-        element.setValue('Smith');
-    });
-    it('should fill  email field', () => {
-        const element = $('form input[name="email"]');
-        element.setValue('aaa@gmail.com');
+        element.setValue(lastName);
+
     });
     it('should fill  Cell phone numberfield', () => {
         const element = $('form input[name="phone"]');
         element.setValue('16503055577');
     });
+    it('should fill  email field', () => {
+        const element = $('form input[name="email"]');
+        element.setValue(email);
+
+    });
     it('should fill password field', () => {
         const element = $('form input[name="password"]');
-        element.setValue('11111');
+        element.setValue(password);
+
 
     });
     it('should fill up about field', () => {
@@ -57,11 +63,22 @@ describe('Register page', () => {
         element.selectByVisibleText('Native');
     });
 
-    it('should choose click button', () => {
+    it('should be able to click button', () => {
         const element = $('form button[type="submit"]').click();
         //element.click();
+        browser.pause(3000);
 
     });
+    it('should check if email is new', () => {
+        const actual = $('h4').getText();
+        const expected = 'User created successfully. Please check your email and verify it';
+        //const expected2 = 'User with this e-mail exists';
+        expect (actual).equal(expected);
+
+    });
+});
+
+    describe('Login page', () => {
     it('should have the right login title', () => {
         browser.url('https://stage.pasv.us/user/login');
         const actual = browser.getTitle();
@@ -72,30 +89,37 @@ describe('Register page', () => {
         const actual = $('h1').getText();
         const expected = 'User Login';
         expect (actual).equal(expected);
+
     });
 
     it('should fill Email field on Login page', () => {
         const element = $('form input[name = "email"]');
-        element.setValue('aaa@gmail.com');
-
+        element.setValue(email);
+        browser.pause(3000)
     });
-    it('should fill Email field on Login page', () => {
+    it('should fill password field on Login page', () => {
         const element = $('form input[name = "password"]');
-        element.setValue('11111');
+        element.setValue(password);
+        browser.pause(3000)
 
     });
-    it('should choose click button', () => {
+    it('should be able to click button', () => {
         const element = $('form button[type="submit"]').click();
-        browser.pause(3000);
+        browser.pause(3000)
+    });
+    it('should have a correct title ', () => {
+        const actual = $('h1').getText();
+        const expected = 'You are a new user';
+        expect (actual).equal(expected);
+    });
     });
 
 
 
 
 
-// проверить что страница логин login title
-    //email
-    //ligin
-   // wait
-    //title first name + last name
-});
+
+
+
+
+
