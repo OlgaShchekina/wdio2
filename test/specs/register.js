@@ -1,5 +1,5 @@
 
-const assert = require('assert');
+//const assert = require('assert');
 const {expect} = require ('chai');
 const email = Math.random()+'aaa@gmail.com';
 const firstName = 'John';
@@ -64,8 +64,8 @@ describe('Register page', () => {
     });
 
     it('should be able to click button', () => {
-        const element = $('form button[type="submit"]').click();
-        //element.click();
+        const element = $('form button[type="submit"]');
+        element.click();
         browser.pause(3000);
 
     });
@@ -95,16 +95,15 @@ describe('Register page', () => {
     it('should fill Email field on Login page', () => {
         const element = $('form input[name = "email"]');
         element.setValue(email);
-        browser.pause(3000)
     });
     it('should fill password field on Login page', () => {
         const element = $('form input[name = "password"]');
         element.setValue(password);
-        browser.pause(3000)
 
     });
     it('should be able to click button', () => {
-        const element = $('form button[type="submit"]').click();
+        const element = $('form button[type="submit"]');
+        element.click();
         browser.pause(3000)
     });
     it('should have a correct title ', () => {
