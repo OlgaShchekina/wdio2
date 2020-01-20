@@ -14,7 +14,10 @@ const user = {
     goals: 'eat sleep code',
     englishLevel: 'Native'
 };
-
+const existingUser = {
+    password: '11111',
+    email: 'olya6avg@gmail.com',
+};
 const pageRegister = {
     title: 'Progress Monitor',
     h1: 'User Register',
@@ -45,4 +48,4 @@ const pageConfirmation = {
     h1: 'You are a new user',
 };
 
-module.exports = { URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors, pageLogin, pageConfirmation };
+module.exports = { URL_REGISTER, URL_LOGIN, user, existingUser,pageRegister, pageRegisterSelectors, pageLogin, pageConfirmation };
