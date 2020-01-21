@@ -50,13 +50,13 @@ describe('CREATE DAY REPORT', () => {
     browser.pause(1000);
   });
   it('should click Save button', () => {
-    const element = browser.$(pageDayReportsSelectors.saveButton);
+    const element = $(pageDayReportsSelectors.saveButton);
     element.click();
-    browser.pause(4000);
+    browser.pause(2000);
   });
   it('should throw the message', () => {
     const actualH4text = browser.$(pageDayReportsSelectors.trowMessageText).getText();
-    const expectedH4Text=pageDayReport.throwMessageText;
+    const expectedH4Text=pageDayReport.throwMessage;
     expect(actualH4text).equal(expectedH4Text);
     browser.pause(2000);
   });

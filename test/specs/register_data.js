@@ -4,6 +4,7 @@ const URL_REGISTER = `${HOST}/user/register`;
 const URL_LOGIN = `${HOST}/user/login`;
 const email = Math.random().toFixed(4) + 'kakak@gmail.com';
 const URL_DAIRY = `${HOST}/diary`;
+const URL_Group = `${HOST}/group`;
 
 const user = {
   firstName: 'John',
@@ -65,8 +66,8 @@ const pageConfirmationSelectors = {
 const pageDayReport = {
   title: 'Daily reports',
   checkbox1 : 'I need help',
-  howWasYourDayText:'I made tests for the page create day report',
-  throwMessageText:'Diary created'
+  howWasYourDayText:'I made tests for the page create day report-2',
+  throwMessage:'Diary created'
 
 };
 const pageDayReportsSelectors = {
@@ -77,14 +78,32 @@ const pageDayReportsSelectors = {
   moraleLevel: '//select[@name="morale"]',
   hoursInput: '//input[@name="hours"]',
   howWasYourDayInput:'//textarea[@name="description"]',
-  saveButton:'//button[@class="btn btn-primary"]',
+  saveButton:'form button[type="submit"]',
   trowMessageText:'//h4[@class="notification-title"]'
+};
+const pageNewGroup = {
+  title: 'Groups',
+  groupName:'Test',
+  groupDescription:'New test group',
+  accessType: 'All',
+  throwMessage: 'Group created'
+};
+const pageNewGroupSelectors = {
+  pageTitle: '//h1[contains(text(),"Groups")]',
+  createNewGroupButton:'//a[@class="btn btn-secondary"]',
+  groupNameInput:'//input[@name="name"]',
+  groupDescriptionInput:'//input[@name="description"]',
+  accessTypeInput:'//select[@name="accessType"]',
+  createButtonClick:'form button[type="submit"]',
+  throwMessageText:'//h4[@class="notification-title"]'
+
+
 
 
 
 };
 module.exports = {
-  URL_REGISTER, URL_LOGIN, URL_DAIRY, user, existingUser,
+  URL_REGISTER, URL_LOGIN, URL_DAIRY,URL_Group, user, existingUser,
   pageRegister, pageDayReportsSelectors, pageRegisterSelectors, pageLoginSelectors,
-  pageConfirmationSelectors, pageLogin, pageConfirmation, pageDayReport
+  pageConfirmationSelectors, pageLogin, pageConfirmation, pageDayReport,pageNewGroup,pageNewGroupSelectors
 };
