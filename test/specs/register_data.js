@@ -3,7 +3,7 @@ const HOST = 'https://stage.pasv.us';
 const URL_REGISTER = `${HOST}/user/register`;
 const URL_LOGIN = `${HOST}/user/login`;
 const email = Math.random().toFixed(4) + 'kakak@gmail.com';
-const URL_DAIRY = `${HOST}/dairy`;
+const URL_DAIRY = `${HOST}/diary`;
 
 const user = {
   firstName: 'John',
@@ -46,6 +46,7 @@ const pageLogin = {
   title: 'Progress Monitor',
   h1: 'User Login',
 };
+
 const pageLoginSelectors = {
   emailInput: 'form input[name="email"]',
   passwordInput: 'form input[name="password"]',
@@ -61,17 +62,29 @@ const pageConfirmationSelectors = {
   messageTrowInput: '//h4[@class="notification-title"]',
 };
 
-const pageDairy = {
+const pageDayReport = {
   title: 'Daily reports',
-  createButtonText: 'Create day report',
-  //createButton:
+  checkbox1 : 'I need help',
+  howWasYourDayText:'I made tests for the page create day report',
+  throwMessageText:'Diary created'
+
 };
-const pageDailyReportsSelectors = {
+const pageDayReportsSelectors = {
   pageTitle: '//h1[contains(text(),"Daily reports")]',
   buttonCreateReport: '//a[@class="btn btn-secondary"]',
+  markCheckbox3:'//input[@id="input-[3]"]',
+  markCheckbox4:'//input[@id="input-[4]"]',
+  moraleLevel: '//select[@name="morale"]',
+  hoursInput: '//input[@name="hours"]',
+  howWasYourDayInput:'//textarea[@name="description"]',
+  saveButton:'//button[@class="btn btn-primary"]',
+  trowMessageText:'//h4[@class="notification-title"]'
+
+
+
 };
 module.exports = {
   URL_REGISTER, URL_LOGIN, URL_DAIRY, user, existingUser,
-  pageRegister, pageDailyReportsSelectors, pageRegisterSelectors, pageLoginSelectors,
-  pageConfirmationSelectors, pageLogin, pageConfirmation, pageDairy
+  pageRegister, pageDayReportsSelectors, pageRegisterSelectors, pageLoginSelectors,
+  pageConfirmationSelectors, pageLogin, pageConfirmation, pageDayReport
 };
