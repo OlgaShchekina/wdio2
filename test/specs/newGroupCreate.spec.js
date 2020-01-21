@@ -1,5 +1,5 @@
 const {expect} = require('chai');
-const {URL_LOGIN,URL_Group, pageLoginSelectors, existingUser,pageNewGroup,pageNewGroupSelectors} = require('./register_data');
+const {URL_LOGIN,URL_GROUP, pageLoginSelectors, existingUser,pageNewGroup,pageNewGroupSelectors} = require('./register_data');
 
 describe('CREATE DAY REPORT', () => {
   before('Login as admin', () => {
@@ -10,7 +10,7 @@ describe('CREATE DAY REPORT', () => {
     browser.pause(2000);
   });
   it('should open the Groups page', () => {
-    browser.url(URL_Group);
+    browser.url(URL_GROUP);
   });
 
   it('should have the right title', () => {

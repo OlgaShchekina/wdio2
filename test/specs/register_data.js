@@ -4,7 +4,8 @@ const URL_REGISTER = `${HOST}/user/register`;
 const URL_LOGIN = `${HOST}/user/login`;
 const email = Math.random().toFixed(4) + 'kakak@gmail.com';
 const URL_DAIRY = `${HOST}/diary`;
-const URL_Group = `${HOST}/group`;
+const URL_GROUP = `${HOST}/group`;
+const URL_FLASH = `${HOST}/flash`;
 
 const user = {
   firstName: 'John',
@@ -96,14 +97,29 @@ const pageNewGroupSelectors = {
   accessTypeInput:'//select[@name="accessType"]',
   createButtonClick:'form button[type="submit"]',
   throwMessageText:'//h4[@class="notification-title"]'
+};
+const pageFlashGroup = {
+  title: 'FlashCards',
+  flashGroupName:'Testing',
+  flashGroupDescription:'Group for testing',
+  flashGroupThrowMessage:'Get all Flash cards groups'
 
+};
+const pageFlashGroupSelectors = {
+  flashGroupTitleInput:'h1',
+  flashGroupButton:'//button[@class="btn btn-secondary"]',
+  flashGroupNameInput:'//input[@name="name"]',
+  flashGroupDescriptionInput:'//input[@name="description"]',
+  flashGroupCreateButton:'//button[@class="btn btn-primary"]',
+  flashGroupThrowMessage:'//h4[@class="notification-title"]'
 
 
 
 
 };
 module.exports = {
-  URL_REGISTER, URL_LOGIN, URL_DAIRY,URL_Group, user, existingUser,
+  URL_REGISTER, URL_LOGIN, URL_DAIRY,URL_GROUP,URL_FLASH, user, existingUser,
   pageRegister, pageDayReportsSelectors, pageRegisterSelectors, pageLoginSelectors,
-  pageConfirmationSelectors, pageLogin, pageConfirmation, pageDayReport,pageNewGroup,pageNewGroupSelectors
+  pageConfirmationSelectors, pageLogin, pageConfirmation, pageDayReport,pageNewGroup,
+  pageNewGroupSelectors,pageFlashGroup,pageFlashGroupSelectors
 };
