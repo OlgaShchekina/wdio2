@@ -2,7 +2,7 @@ const HOST = 'https://stage.pasv.us';
 
 const URL_REGISTER = `${HOST}/user/register`;
 const URL_LOGIN = `${HOST}/user/login`;
-const email = Math.random().toFixed(4) + 'kakak@gmail.com';
+const email = Math.random() + 'kakak@gmail.com';
 const URL_DAIRY = `${HOST}/diary`;
 const URL_GROUP = `${HOST}/group`;
 const URL_FLASH = `${HOST}/flash`;
@@ -41,7 +41,7 @@ const pageRegisterSelectors = {
   aboutInput: 'form textarea[name="about"]',
   goalsInput: 'form textarea[name="goals"]',
   englishLevelInput: 'form select[name="englishLevel"]',
-  messageTrowInput: '//h4[@class="notification-title"]',
+  messageTrowInput: 'h4'
 };
 
 const pageLogin = {
@@ -61,7 +61,7 @@ const pageConfirmation = {
   h4: 'Auth success',
 };
 const pageConfirmationSelectors = {
-  messageTrowInput: '//h4[@class="notification-title"]',
+  messageTrowInput: 'h4'
 };
 
 const pageDayReport = {
@@ -72,46 +72,50 @@ const pageDayReport = {
 
 };
 const pageDayReportsSelectors = {
-  pageTitle: '//h1[contains(text(),"Daily reports")]',
+  pageTitle: 'h1',
   buttonCreateReport: '//a[@class="btn btn-secondary"]',
-  markCheckbox3:'//input[@id="input-[3]"]',
-  markCheckbox4:'//input[@id="input-[4]"]',
-  moraleLevel: '//select[@name="morale"]',
-  hoursInput: '//input[@name="hours"]',
-  howWasYourDayInput:'//textarea[@name="description"]',
+  markCheckbox3: 'form input[id="input-3"]',
+  markCheckbox4:'form input[id="input-4"]',
+  moraleLevel: 'form select[name="morale"]',
+  hoursInput: 'form input[name="hours"]',
+  howWasYourDayInput:'form textarea[name="description"]',
   saveButton:'form button[type="submit"]',
-  trowMessageText:'//h4[@class="notification-title"]'
+  trowMessageText:'h4'
 };
 const pageNewGroup = {
   title: 'Groups',
   groupName:'Test',
   groupDescription:'New test group',
   accessType: 'All',
-  throwMessage: 'Group created'
+  throwMessage: 'Group created',
+  title2:'Create new Group'
 };
 const pageNewGroupSelectors = {
-  pageTitle: '//h1[contains(text(),"Groups")]',
-  createNewGroupButton:'//a[@class="btn btn-secondary"]',
-  groupNameInput:'//input[@name="name"]',
-  groupDescriptionInput:'//input[@name="description"]',
-  accessTypeInput:'//select[@name="accessType"]',
+  pageTitle: 'h1',
+  createNewGroupButton: '//a[@class="btn btn-secondary"]',
+  groupNameInput:'form input[name="name"]',
+  groupDescriptionInput:'form input[name="description"]',
+  accessTypeInput:'form select[name="accessType"]',
   createButtonClick:'form button[type="submit"]',
-  throwMessageText:'//h4[@class="notification-title"]'
+  throwMessageText:'h4',
+  pageTitle2: 'h1'
 };
 const pageFlashGroup = {
   title: 'FlashCards',
   flashGroupName:'Testing',
   flashGroupDescription:'Group for testing',
-  flashGroupThrowMessage:'Get all Flash cards groups'
+  flashGroupThrowMessage:'Get all Flash cards groups',
+  title2: 'Create Flash Group'
 
 };
 const pageFlashGroupSelectors = {
   flashGroupTitleInput:'h1',
   flashGroupButton:'//button[@class="btn btn-secondary"]',
-  flashGroupNameInput:'//input[@name="name"]',
-  flashGroupDescriptionInput:'//input[@name="description"]',
+  flashGroupNameInput:'form input[name="name"]',
+  flashGroupDescriptionInput:'form input[name="description"]',
   flashGroupCreateButton:'//button[@class="btn btn-primary"]',
-  flashGroupThrowMessage:'//h4[@class="notification-title"]'
+  flashGroupThrowMessage:'h4',
+  h5: 'h5'
 
 
 

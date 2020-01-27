@@ -22,6 +22,11 @@ describe('CREATE DAY REPORT', () => {
     const element = browser.$( pageNewGroupSelectors.createNewGroupButton);
     element.click();
   });
+  it('should have the right title', () => {
+    const actualTitle = browser.$(pageNewGroupSelectors.pageTitle2).getText();
+    const expectedTitle = pageNewGroup.title2;
+    expect(actualTitle).equal(expectedTitle);
+  });
   it('should fill in Group name field', () => {
     const element = browser.$(pageNewGroupSelectors.groupNameInput);
     element.setValue(pageNewGroup.groupName);

@@ -23,6 +23,13 @@ describe('CREATE DAY REPORT', () => {
     element.click();
     browser.pause(1000);
   });
+
+  it('should have the right title', () => {
+    const actualTitle = $(pageFlashGroupSelectors.h5).getText();
+    const expectedTitle = pageFlashGroup.title2;
+    expect(actualTitle).equal(expectedTitle);
+  });
+
   it('should fill in FlashGroup name field', () => {
     const element = browser.$(pageFlashGroupSelectors.flashGroupNameInput);
     element.setValue(pageFlashGroup.flashGroupName);
