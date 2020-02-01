@@ -84,7 +84,7 @@ const pageDayReportsSelectors = {
 };
 const pageNewGroup = {
   title: 'Groups',
-  groupName:'Test',
+  groupName: Math.random().toFixed(4) + 'HELLO',
   groupDescription:'New test group',
   accessType: 'All',
   throwMessage: 'Group created',

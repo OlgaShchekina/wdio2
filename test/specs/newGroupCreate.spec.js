@@ -47,12 +47,20 @@ describe('CREATE DAY REPORT', () => {
     element.click();
     browser.pause(1000);
   });
-  it('should throw the message', () => {
-    const actualH4text = browser.$(pageNewGroupSelectors.throwMessageText).getText();
-    const expectedH4Text=pageNewGroup.throwMessage;
-    expect(actualH4text).equal(expectedH4Text);
-    browser.pause(2000);
-  });
+  // it('should throw the message', () => {
+  //   const actualH4text = browser.$(pageNewGroupSelectors.throwMessageText).getText();
+  //   const expectedH4Text=pageNewGroup.throwMessage;
+  //   expect(actualH4text).equal(expectedH4Text);
+  //   browser.pause(2000);
+  // });
+  // it('should find created group', () => {
+  //   const element = browser.$$('h4');
+  //   let num = element.find(el => el === pageNewGroup.groupName);
+  //   expect(num).equal(pageNewGroup.groupName);
+  //
+  //   browser.pause(2000);
+  // });
+
 
 
 });
