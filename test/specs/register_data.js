@@ -1,5 +1,4 @@
 const HOST = 'https://stage.pasv.us';
-
 const URL_REGISTER = `${HOST}/user/register`;
 const URL_LOGIN = `${HOST}/user/login`;
 const email = Math.random() + 'kakak@gmail.com';
@@ -67,19 +66,19 @@ const pageConfirmationSelectors = {
 const pageDayReport = {
   title: 'Daily reports',
   checkbox1 : 'I need help',
-  howWasYourDayText:'I made tests for the page create day report-2',
+  howWasYourDayText:'I have made tests for the page create day report-2',
   throwMessage:'Diary created'
 
 };
 const pageDayReportsSelectors = {
-  pageTitle: 'h1',
-  buttonCreateReport: '//a[@class="btn btn-secondary"]',
-  markCheckbox3: 'form input[id="input-3"]',
-  markCheckbox4:'form input[id="input-4"]',
-  moraleLevel: 'form select[name="morale"]',
-  hoursInput: 'form input[name="hours"]',
-  howWasYourDayInput:'form textarea[name="description"]',
-  saveButton:'form button[type="submit"]',
+  pageTitle: '//h1',
+  buttonCreateReport: '//a[@qa="create-day-report-button"]',
+  markCheckbox3: '//input[@id="input-3"]',
+  markCheckbox4:'//input[@id="input-4"]',
+  moraleLevel: '//select[@name="morale"]',
+  hoursInput: '//input[@name="hours"]',
+  howWasYourDayInput:'//textarea[@name="description"]',
+  saveButton:'//button[@type="submit"]',
   trowMessageText:'h4'
 };
 const pageNewGroup = {

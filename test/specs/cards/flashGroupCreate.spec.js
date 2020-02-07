@@ -20,8 +20,8 @@ describe('FLASH GROUP CREATE', () => {
     browser.$('//button[@qa="flash-create-new-group"]').click();
     browser.pause(1000);
   });
-  it('should check if model form is open ', () => {
 
+  it('should check if model form is open ', () => {
    const element = browser.$('//div[contains(@class,"sidepanel")]');
    expect(element.isDisplayed()).true;
   });
