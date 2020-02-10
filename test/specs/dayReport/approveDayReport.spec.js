@@ -1,5 +1,5 @@
 const {expect} = require('chai');
-const {URL_LOGIN,URL_DAIRY,pageLoginSelectors, existingUser} = require('../register_data');
+const {URL_DAIRY} = require('../register_data');
 const {loginAsAdmin,logoutAsAdmin} = require('./actions');
 
 describe('CREATE DAY REPORT', () => {

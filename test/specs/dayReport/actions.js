@@ -12,7 +12,7 @@ function loginAsAdmin() {
 function logoutAsAdmin() {
     browser.$('//a[@class="dropdown-toggle nav-link"]').click();
     browser.$('//button[contains(text(),"Logout")]').click();
-    browser.pause(1000);
+    browser.pause(5000);
 }
 
 

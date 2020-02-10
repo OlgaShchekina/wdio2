@@ -1,5 +1,5 @@
 const {expect} = require('chai');
-const {URL_LOGIN, URL_FLASH, pageLoginSelectors, existingUser,pageFlashGroup,pageFlashGroupSelectors} = require('../register_data');
+const {URL_LOGIN, pageLoginSelectors, existingUser,pageFlashGroup,pageFlashGroupSelectors} = require('../register_data');
 
 describe('FLASH GROUP CREATE', () => {
   before('Login as admin', () => {
