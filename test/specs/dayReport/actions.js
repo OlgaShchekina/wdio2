@@ -1,4 +1,5 @@
-const {URL_LOGIN,pageLoginSelectors, existingUser} = require('../register_data');
+
+import {URL_LOGIN,pageLoginSelectors, existingUser} from '../register_data';
 
 
 function loginAsAdmin() {

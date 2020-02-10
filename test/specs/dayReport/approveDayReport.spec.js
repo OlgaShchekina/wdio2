@@ -1,7 +1,6 @@
-const {expect} = require('chai');
-const {URL_DAIRY} = require('../register_data');
-const {loginAsAdmin,logoutAsAdmin} = require('./actions');
 
+import {URL_DAIRY} from '../register_data';
+import  {loginAsAdmin,logoutAsAdmin} from './actions';
 describe('CREATE DAY REPORT', () => {
     before('Login as admin', () => {
         loginAsAdmin();

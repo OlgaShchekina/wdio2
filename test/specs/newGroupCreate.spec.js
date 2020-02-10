@@ -1,5 +1,5 @@
-const {expect} = require('chai');
-const {URL_LOGIN,URL_GROUP, pageLoginSelectors, existingUser,pageNewGroup,pageNewGroupSelectors} = require('./register_data');
+import {expect} from 'chai';
+import {URL_LOGIN,URL_GROUP, pageLoginSelectors, existingUser,pageNewGroup,pageNewGroupSelectors} from './register_data';
 
 describe('CREATE DAY REPORT', () => {
   before('Login as admin', () => {

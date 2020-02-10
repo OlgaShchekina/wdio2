@@ -1,5 +1,5 @@
-const {expect} = require('chai');
-const {URL_REGISTER, user, existingUser, pageRegisterSelectors} = require('./register_data');
+import {expect} from 'chai';
+import {URL_REGISTER, user, existingUser, pageRegisterSelectors} from './register_data';
 
 describe('Register page', () => {
   before('Check existing user', () => {
