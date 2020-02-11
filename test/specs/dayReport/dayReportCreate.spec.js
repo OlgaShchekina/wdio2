@@ -1,7 +1,13 @@
 
 import {expect} from 'chai';
-import {URL_LOGIN,pageLoginSelectors, existingUser, pageDayReport, pageDayReportsSelectors,} from '../Register/register_data';
+import {
+  pageLoginSelectors,
+  existingUser,
+  pageDayReport,
+  pageDayReportsSelectors,
+} from '../Register/register_data';
 
+import {URL_LOGIN} from '../url';
 describe('CREATE DAY REPORT', () => {
   before('Login as admin', () => {
     browser.url(URL_LOGIN);
@@ -37,22 +43,22 @@ describe('CREATE DAY REPORT', () => {
   it('should mark checkbox Read documentation', () => {
     const element = $( pageDayReportsSelectors.markCheckbox4);
     element.click();
-   // browser.pause(1000);
+    // browser.pause(1000);
   });
   it('should choose Morale level dropdown', () => {
     const element = $(pageDayReportsSelectors.moraleLevel);
     element.selectByVisibleText('9');
-   // browser.pause(1000);
+    // browser.pause(1000);
   });
   it('should fill Hours field ', () => {
     const element = $(pageDayReportsSelectors.hoursInput);
     element.setValue('4');
-   // browser.pause(1000);
+    // browser.pause(1000);
   });
   it('should fill in How Was Your Day field', () => {
     const element = $(pageDayReportsSelectors.howWasYourDayInput);
     element.setValue(pageDayReport.howWasYourDayText);
-   // browser.pause(1000);
+    // browser.pause(1000);
   });
   it('should click Save button', () => {
     const element = $(pageDayReportsSelectors.saveButton);

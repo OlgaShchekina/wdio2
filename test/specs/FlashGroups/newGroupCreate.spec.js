@@ -1,6 +1,6 @@
 import {expect} from 'chai';
-import {URL_LOGIN,URL_GROUP, pageLoginSelectors, existingUser,pageNewGroup,pageNewGroupSelectors} from '../Register/register_data';
-
+import {pageLoginSelectors, existingUser,pageNewGroup,pageNewGroupSelectors} from '../Register/register_data';
+import {URL_LOGIN,URL_GROUP} from '../url';
 describe('CREATE DAY REPORT', () => {
   before('Login as admin', () => {
     browser.url(URL_LOGIN);

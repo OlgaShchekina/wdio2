@@ -1,6 +1,6 @@
 
-import {URL_DAIRY} from '../Register/register_data';
 import  {loginAsAdmin,logoutAsAdmin} from './actions';
+import {URL_DAIRY} from '../url';
 describe('CREATE DAY REPORT', () => {
   before('Login as admin', () => {
     loginAsAdmin();

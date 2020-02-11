@@ -1,6 +1,6 @@
 import {expect} from 'chai';
-import {URL_LOGIN, pageLoginSelectors, existingUser,pageFlashGroup}from '../Register/register_data';
-
+import {pageLoginSelectors, existingUser,pageFlashGroup}from '../Register/register_data';
+import {URL_LOGIN} from '../url';
 describe('FLASH GROUP CREATE', () => {
   before('Login as admin', () => {
     browser.url(URL_LOGIN);

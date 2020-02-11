@@ -1,5 +1,6 @@
 import Page from '../Page';
-import {existingUser, pageRegisterSelectors, URL_REGISTER, user} from './register_data';
+import {existingUser, pageRegisterSelectors, user} from './register_data';
+import {URL_REGISTER} from '../url';
 
 class RegisterPage extends Page {
 
