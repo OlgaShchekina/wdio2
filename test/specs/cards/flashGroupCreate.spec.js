@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {URL_LOGIN, pageLoginSelectors, existingUser,pageFlashGroup,pageFlashGroupSelectors}from '../register_data';
+import {URL_LOGIN, pageLoginSelectors, existingUser,pageFlashGroup}from '../Register/register_data';
 
 describe('FLASH GROUP CREATE', () => {
   before('Login as admin', () => {
@@ -9,9 +9,9 @@ describe('FLASH GROUP CREATE', () => {
     $(pageLoginSelectors.submitButton).click();
     browser.pause(2000);
   });
-  after('AFTER', () => {
-    browser.pause(3000);
-  });
+  // after('AFTER', () => {
+  //   browser.pause(3000);
+  // });
   it('should click top menu Cards', () => {
     browser.$('//div[@id="site-menu"]//a[@qa="cards-link"]').click();
   });
@@ -22,8 +22,8 @@ describe('FLASH GROUP CREATE', () => {
   });
 
   it('should check if model form is open ', () => {
-   const element = browser.$('//div[contains(@class,"sidepanel")]');
-   expect(element.isDisplayed()).true;
+    const element = browser.$('//div[contains(@class,"sidepanel")]');
+    expect(element.isDisplayed()).true;
   });
   it('should check if model form is correct ', () => {
     const actual = browser.$('//div[contains(@class,"sidepanel")]//*[@class="modal-title"]').getText();

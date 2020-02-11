@@ -1,7 +1,7 @@
 const HOST = 'https://stage.pasv.us';
 const URL_REGISTER = `${HOST}/user/register`;
 const URL_LOGIN = `${HOST}/user/login`;
-const email = Math.random() + 'kakak@gmail.com';
+const email = Math.random().toFixed(4) + 'test@gmail.com';
 const URL_DAIRY = `${HOST}/diary`;
 const URL_GROUP = `${HOST}/group`;
 const URL_FLASH = `${HOST}/flash`;
@@ -9,7 +9,7 @@ const URL_FLASH = `${HOST}/flash`;
 const user = {
   firstName: 'John',
   lastName: 'Smith',
-  password: 'password',
+  password: '11111',
   phone: '14259195668',
   email: email,
   about: 'something about me',
@@ -29,18 +29,19 @@ const pageRegister = {
 };
 
 const pageRegisterSelectors = {
-  h1: 'h1',
-  description: 'p',
-  submitButton: 'form button[type="submit"]',
-  firstNameInput: 'form input[name="firstName"]',
-  lastNameInput: 'form input[name="lastName"]',
-  phoneInput: 'form input[name="phone"]',
-  emailInput: 'form input[name="email"]',
-  passwordInput: 'form input[name="password"]',
-  aboutInput: 'form textarea[name="about"]',
-  goalsInput: 'form textarea[name="goals"]',
-  englishLevelInput: 'form select[name="englishLevel"]',
-  messageTrowInput: 'h4'
+  title: '//span[@id="site-name"]',
+  description: '//p',
+  h1: '//h1',
+  submitButton: '//button[@type="submit"]',
+  firstNameInput: '//input[@name="firstName"]',
+  lastNameInput: '//input[@name="lastName"]',
+  phoneInput: '//input[@name="phone"]',
+  emailInput: '//input[@name="email"]',
+  passwordInput: '//input[@name="password"]',
+  aboutInput: '//textarea[@name="about"]',
+  goalsInput: '//textarea[@name="goals"]',
+  englishLevelInput: '//select[@name="englishLevel"]',
+  messageTrowInput: '//div[@class="notifications-wrapper"]//h4[@class="notification-title"]'
 };
 
 const pageLogin = {
@@ -49,9 +50,9 @@ const pageLogin = {
 };
 
 const pageLoginSelectors = {
-  emailInput: 'form input[name="email"]',
-  passwordInput: 'form input[name="password"]',
-  submitButton: 'form button[type="submit"]',
+  emailInput: '//input[@name="email"]',
+  passwordInput: '//input[@name="password"]',
+  submitButton: '//button[@type="submit"]',
 
 };
 

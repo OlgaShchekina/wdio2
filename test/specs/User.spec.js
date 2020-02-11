@@ -1,5 +1,5 @@
 
-import {URL_LOGIN,pageLoginSelectors, existingUser} from'./register_data';
+import {URL_LOGIN,pageLoginSelectors, existingUser} from './Register/register_data';
 
 describe('CREATE DAY REPORT', () => {
   before('Login as admin', () => {
