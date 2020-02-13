@@ -121,7 +121,7 @@ const pageFlashGroupSelectors = {
 
 
 };
-module.exports = {
+exports.module = {
   URL_REGISTER, URL_LOGIN, URL_DAIRY,URL_GROUP,URL_FLASH, user, existingUser,
   pageRegister, pageDayReportsSelectors, pageRegisterSelectors, pageLoginSelectors,
   pageConfirmationSelectors, pageLogin, pageConfirmation, pageDayReport,pageNewGroup,
