@@ -20,9 +20,7 @@ class LoginPage extends Page {
   get loginLink() {
     return $('//div[@id="site-menu"]//a[@qa="cards-link"]')
   }
-  get cardsLink(){
-    return browser.$('//div[@id="site-menu"]//a[@qa="cards-link"]');
-  }
+
 
   login() {
     this.open();

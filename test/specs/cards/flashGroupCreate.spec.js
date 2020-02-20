@@ -68,6 +68,7 @@ describe('FLASH GROUP CREATE', () => {
     const expected = 'Testing';
     expect(actual).equal(expected);
     browser.pause(1000);
+
   });
 
 });

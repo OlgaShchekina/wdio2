@@ -29,9 +29,29 @@ class TestGroupPage extends Page {
   get iKnow(){
     return $('//button[contains(text(),"I know")]');
   }
-  get progress(){
-    return $('//div[@class="progress")]//div[@aria-valuenow="0"]');
+  get progress1(){
+    return $('//div[@class="container"]//div[@aria-valuenow="0"]');
   }
+  get progress2(){
+    return $('//div[@class="container"]//div[@aria-valuenow="33"]');
+  }
+  get progress3(){
+    return $('//div[@class="container"]//div[@aria-valuenow="66"]');
+  }
+  get initialValue1(){
+    return $('//h3[contains(text(),"what is the numerator?")]');
+  }
+  get currentValue2(){
+    return $('//h3[contains(text(),"What is the Quotient")]');
+  }
+  get currentValue3(){
+    return $('//h3[contains(text(),"what is the numerator?")]');
+  }
+
+
+
+
+
 
 
 
