@@ -52,8 +52,7 @@ describe('CARDS TESTING WHEN TEST START AND NOT FINISHED', () => {
   //
 
   it('should check if button Show Answer is displayed', function () {
-    expect(TestGroupPage.showAnswerButton1.isDisplayed()).true;
-    expect(TestGroupPage.showAnswerButton2.isDisplayed()).true;
+    expect(TestGroupPage.showAnswerButton.isDisplayed()).true;
   });
   it('should check if button Get random next is displayed', function () {
     expect(TestGroupPage.getRandomNext.isDisplayed()).true;
