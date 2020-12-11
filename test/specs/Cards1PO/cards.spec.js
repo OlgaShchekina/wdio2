@@ -46,12 +46,13 @@ describe('CARDS TESTING WHEN TEST START AND NOT FINISHED', () => {
     }
     browser.pause(1000);
   });
-  it('should check if button I know is displayed', function () {
-    expect(TestGroupPage.iKnowButton.isDisplayed()).true;
-  });
+  // it('should check if button I know is displayed', function () {
+  //   expect(TestGroupPage.iKnowButton.isDisplayed()).true;
+  // });
+  //
 
   it('should check if button Show Answer is displayed', function () {
-    expect(TestGroupPage.showAnswerButton3.isDisplayed()).true;
+    expect(TestGroupPage.showAnswerButton.isDisplayed()).true;
   });
   it('should check if button Get random next is displayed', function () {
     expect(TestGroupPage.getRandomNext.isDisplayed()).true;
